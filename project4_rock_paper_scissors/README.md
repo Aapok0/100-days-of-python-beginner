@@ -9,3 +9,7 @@ You make your choice by typing a number between 0-2, where
 ## How to play
 
 Clone the repository and run the rock_paper_scissors.py with a Python interpreter.
+
+## Course solution
+
+https://replit.com/@appbrewery/rock-paper-scissors-end

@@ -12,11 +12,12 @@ These projects are a part of a [Udemy Python course](https://www.udemy.com/cours
   - Data types, numbers, operations, type conversion and f-strings
 - [X] Day 3: [Treasure Island](https://github.com/Aapok0/100_days_of_python_beginner/tree/main/project3_treasure_island)
   - Conditional statements, logical operators, code blocks and scope
-- [X] Day 4: [Rock Paper Scissors]()
+- [X] Day 4: [Rock Paper Scissors](https://github.com/Aapok0/100_days_of_python_beginner/tree/main/project4_rock_paper_scissors)
   - Randomization and Python lists
-- [ ] Day 5: [Password generator]()
+- [X] Day 5: [Password generator](https://github.com/Aapok0/100_days_of_python_beginner/tree/main/project5_password_generator)
   - For loops, range and code blocks
 - [ ] Day 6: [Escaping the Maze]()
+  - Functions, code blocks and while loops
 - [ ] Day 7: []()
 - [ ] Day 8: []()
 - [ ] Day 9: []()
