@@ -39,12 +39,12 @@ print("Hi! Try to beat me in Rock Paper Scissors! \n")
 player_choice = input('Make your choice: "0" for rock, "1" for paper or "2" for scissors: \n')
 
 if player_choice == "0" or player_choice == "1" or player_choice == "2":
-  player_choice_int = int(player_choice)
-  print("\nPlayer:" + hands[player_choice_int])
+    player_choice_int = int(player_choice)
+    print("\nPlayer:" + hands[player_choice_int])
 
-  computer_choice = random.randint(0, 2)
-  print("Computer:" + hands[computer_choice])
+    computer_choice = random.randint(0, 2)
+    print("Computer:" + hands[computer_choice])
 
-  print(result_map[player_choice_int][computer_choice])
+    print(result_map[player_choice_int][computer_choice])
 else:
-  print('\nInvalid choice. Next time remember to type "0" for rock, "1" for paper or "2" for scissors.')
+    print('\nInvalid choice. Next time remember to type "0" for rock, "1" for paper or "2" for scissors.')
