@@ -16,9 +16,10 @@ These projects are a part of a [Udemy Python course](https://www.udemy.com/cours
   - Randomization and Python lists
 - [X] Day 5: [Password generator](https://github.com/Aapok0/100_days_of_python_beginner/tree/main/day5_password_generator)
   - For loops, range and code blocks
-- [ ] Day 6: [Reeborg's World]()
+- [X] Day 6: [Reeborg's World](https://github.com/Aapok0/100_days_of_python_beginner/tree/main/day6_reeborgs_world)
   - Functions, code blocks and while loops
-- [ ] Day 7: []()
+- [ ] Day 7: [Hangman]()
+  - Hangman project with everything learned earlier
 - [ ] Day 8: []()
 - [ ] Day 9: []()
 - [ ] Day 10: []()
