@@ -1,33 +1,25 @@
 import random
-
-#Step 5
-
-#TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
-#Delete this line: word_list = ["ardvark", "baboon", "camel"]
-
 from hangman_art import *
 from hangman_words import word_list
 
-#TODO-3: - Import the logo from hangman_art.py and print it at the start of the game
-
 print(logo, '\n')
-print("Try to guess the following blank word letter by letter. Wrong answers progress hangman's work. Don't let hangman finish his job..\n")
+print("Try to guess the following blank word letter by letter. Wrong answers take hangman closer to hanging. Don't let that happen..")
 
 chosen_word = random.choice(word_list)
 
 display = []
 for letter in chosen_word:
     display += '_'
-print(f'{" ".join(display)}\n')
 
 lives = len(stages) - 1
 guesses = []
 
 while '_' in display:
+    print(chosen_word)
+    print(f'\n{" ".join(display)}')
+    print(stages[lives])
+
     guess = input('Guess a letter: ').lower()
-
-    #TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
-
     if guess in guesses:
         print(f'You already guessed {guess}.')
         continue
@@ -39,15 +31,18 @@ while '_' in display:
             correct_guess = True
     if guess not in chosen_word:
         lives -= 1
+        if lives == 0:
+            print(f'You guessed wrong. Letter {guess} is not in the word.')
+            print(f'\n{" ".join(display)}')
+            print(stages[lives])
+            print('You let hangman be hung.. You lose!')
+            break
+        else:
+            print(f'You guessed wrong. Letter {guess} is not in the word. Hangman is one step closer to hanging..')
+    else:
+        print(f'Correct! Letter {guess} is found in the word.')
 
-    print(f'{" ".join(display)}\n')
-
-    #TODO-2: - Import the stages from hangman_art.py and make this error go away.
-
-    print(stages[lives])
-
-    if lives == 0:
-        print('You lose!')
-        break
     if '_' not in display:
-        print('Congratulations, you win!')
+        print(f'\n{" ".join(display)}')
+        print(stages[lives])
+        print('Congratulations, you found the word and saved hangman! You win!')
