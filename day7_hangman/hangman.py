@@ -1,63 +1,18 @@
 import random
 
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+#Step 5
 
-word_list = ["aardvark", "baboon", "camel"]
+#TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
+#Delete this line: word_list = ["ardvark", "baboon", "camel"]
+
+from hangman_art import *
+from hangman_words import word_list
+
+#TODO-3: - Import the logo from hangman_art.py and print it at the start of the game
+
+print(logo, '\n')
+print("Try to guess the following blank word letter by letter. Wrong answers progress hangman's work. Don't let hangman finish his job..\n")
+
 chosen_word = random.choice(word_list)
 
 display = []
@@ -65,19 +20,18 @@ for letter in chosen_word:
     display += '_'
 print(f'{" ".join(display)}\n')
 
-#Step 4
-
-#TODO-1: - Create a variable called 'lives' to keep track of the number of lives left. 
-#Set 'lives' to equal 6.
-
 lives = len(stages) - 1
+guesses = []
 
 while '_' in display:
     guess = input('Guess a letter: ').lower()
 
-    #TODO-2: - If guess is not a letter in the chosen_word,
-    #Then reduce 'lives' by 1. 
-    #If lives goes down to 0 then the game should stop and it should print "You lose."
+    #TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
+
+    if guess in guesses:
+        print(f'You already guessed {guess}.')
+        continue
+    guesses += guess
 
     for i in range(len(chosen_word)):
         if guess == chosen_word[i]:
@@ -88,7 +42,7 @@ while '_' in display:
 
     print(f'{" ".join(display)}\n')
 
-    #TODO-3: - print the ASCII art from 'stages' that corresponds to the current number of 'lives' the user has remaining.
+    #TODO-2: - Import the stages from hangman_art.py and make this error go away.
 
     print(stages[lives])
 
