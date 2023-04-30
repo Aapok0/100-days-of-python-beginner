@@ -1,21 +1,7 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
-
-#TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
-
-def encrypt(text, shift):
-
-    #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
-    #e.g. 
-    #plain_text = "hello"
-    #shift = 5
-    #cipher_text = "mjqqt"
-    #print output: "The encoded text is mjqqt"
-
-    encrypted_text = ""
+def encode(text, shift):
+    encoded_text = ""
     max_index = len(alphabet) - 1
 
     for letter in text:
@@ -25,17 +11,55 @@ def encrypt(text, shift):
             new_index = index + shift - max_index - 1
         else:
             new_index = index + shift
-        encrypted_letter = alphabet[new_index]
-        encrypted_text += encrypted_letter
+        encoded_letter = alphabet[new_index]
+        encoded_text += encoded_letter
     
-    print(encrypted_text)
+    print(f"The encoded text is {encoded_text}")
 
+#TODO-1: Create a different function called 'decrypt' that takes the 'text' and 'shift' as inputs.
 
-    ##HINT: How do you get the index of an item in a list:
-    #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
+def decode(text, shift):
 
-    ##🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
+    #TODO-2: Inside the 'decrypt' function, shift each letter of the 'text' *backwards* in the alphabet by the shift amount and print the decoded text.  
+    #e.g. 
+    #cipher_text = "mjqqt"
+    #shift = 5
+    #plain_text = "hello"
+    #print output: "The decoded text is hello"
 
-#TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
+    decoded_text = ""
+    max_index = len(alphabet) - 1
 
-encrypt(text, shift)
+    for letter in text:
+        index = alphabet.index(letter)
+        
+        if index - shift < 0:
+            new_index = index - shift + max_index + 1
+        else:
+            new_index = index - shift
+        decoded_letter = alphabet[new_index]
+        decoded_text += decoded_letter
+    
+    print(f"The decoded text is {decoded_text}")
+
+#TODO-3: Check if the user wanted to encrypt or decrypt the message by checking the 'direction' variable. Then call the correct function based on that 'direction' variable. You should be able to test the code to encrypt *AND* decrypt a message.
+
+quit = False
+direction = input("Type 'encode' to encode, type 'decode' to decode:\n")
+
+while quit == False:
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+
+    if direction == "encode":
+        encode(text, shift)
+        direction = input("Do you want to continue? Type 'encode to encode, type 'decode' to decode or 'quit' to quit:\n")
+    elif direction == "decode":
+        decode(text, shift)
+        direction = input("Do you want to continue? Type 'encode to encode, type 'decode' to decode or 'quit' to quit:\n")
+    else:
+        print(f"Unrecognized command '{direction}'.")
+        direction = input("Type 'encode' to encode, type 'decode' to decode:\n")
+
+    if direction == "quit":
+        quit = True
