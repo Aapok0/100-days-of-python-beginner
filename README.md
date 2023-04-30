@@ -2,7 +2,7 @@
 
 ## Beginner
 
-These projects are a part of a [Udemy Python course](https://www.udemy.com/course/100-days-of-code/). They are supposed to span the first 15 days as the beginner part of the course.
+These projects are a part of a [Udemy Python course](https://www.udemy.com/course/100-days-of-code/). They are supposed to span the first 15 days as the beginner part of the course. Some of the code like ASCII-art, lists and starting print statements are from the course's starting code so as to spend time mostly on the functionality of the projects and learning.
 
 ### Projects
 
@@ -18,7 +18,7 @@ These projects are a part of a [Udemy Python course](https://www.udemy.com/cours
   - For loops, range and code blocks
 - [X] Day 6: [Reeborg's World](https://github.com/Aapok0/100_days_of_python_beginner/tree/main/day6_reeborgs_world)
   - Functions, code blocks and while loops
-- [X] Day 7: [Hangman]()
+- [X] Day 7: [Hangman](https://github.com/Aapok0/100_days_of_python_beginner/tree/main/day7_hangman)
   - Hangman project with everything learned earlier
 - [ ] Day 8: [Caesar Cipher]()
   - Functions with inputs

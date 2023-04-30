@@ -1,3 +1,4 @@
+# ASCII-art gotten from starting code of the course
 stages = ['''
   +---+
   |   |

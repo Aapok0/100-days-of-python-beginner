@@ -1,3 +1,4 @@
+# List of words gotten from starting code of the course
 word_list = [
 'abruptly', 
 'absurd', 

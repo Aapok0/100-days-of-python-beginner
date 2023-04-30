@@ -1,5 +1,6 @@
 import random
 
+# ASCII-art gotten from starting code of the course
 rock = '''
     _______
 ---'   ____)
