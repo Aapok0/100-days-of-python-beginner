@@ -30,8 +30,10 @@ while quit == False:
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
 
-    if shift > 26:
-        shift = shift % 26
+    if shift % 26 == 0:
+        print("You've shifted through the entire alphabet so message is not going to be encoded.")
+        shift = int(input("Type shift number that is not divisible by 26:\n"))
+    shift = shift % 26
 
     if direction == "encode" or direction == "decode":
         caesar(text, shift, direction)
