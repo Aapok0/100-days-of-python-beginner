@@ -6,30 +6,19 @@ def caesar(text, shift, direction):
     cipher_text = ""
     max_index = len(alphabet) - 1
 
-    if direction == "encode":
-        for character in text:
-            if character in alphabet:
-                index = alphabet.index(character)
-                
-                if index + shift > max_index:
-                    new_index = index + shift - max_index - 1
-                else:
-                    new_index = index + shift
-                cipher_text += alphabet[new_index]
+    if direction == "decode":
+        shift *= -1
+
+    for character in text:
+        if character in alphabet:
+            index = alphabet.index(character) 
+            if index + shift > max_index:
+                new_index = index + shift - max_index - 1
             else:
-                cipher_text += character
-    elif direction == "decode":
-        for character in text:
-            if character in alphabet:
-                index = alphabet.index(character)
-                
-                if index - shift < 0:
-                    new_index = index - shift + max_index + 1
-                else:
-                    new_index = index - shift
-                cipher_text += alphabet[new_index]
-            else:
-                cipher_text += character
+                new_index = index + shift
+            cipher_text += alphabet[new_index]
+        else:
+            cipher_text += character
 
     print(f"The {direction}d text is: {cipher_text}")
 
