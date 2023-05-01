@@ -20,9 +20,10 @@ These projects are a part of a [Udemy Python course](https://www.udemy.com/cours
   - Functions, code blocks and while loops
 - [X] Day 7: [Hangman](https://github.com/Aapok0/100_days_of_python_beginner/tree/main/day7_hangman)
   - Hangman project with everything learned earlier
-- [ ] Day 8: [Caesar Cipher]()
+- [X] Day 8: [Caesar Cipher](https://github.com/Aapok0/100_days_of_python_beginner/tree/main/day8_caesar_cipher)
   - Functions with inputs
-- [ ] Day 9: []()
+- [ ] Day 9: [The Secret Auction Program]()
+  - Dictionaries and nesting
 - [ ] Day 10: []()
 - [ ] Day 11: []()
 - [ ] Day 12: []()

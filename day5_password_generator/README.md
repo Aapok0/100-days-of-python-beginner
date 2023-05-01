@@ -6,6 +6,4 @@ App to generate a secure password to lessen the probability of getting hacked. S
 
 Clone the repository and run the password_generator.py with a Python interpreter.
 
-## Course solution
-
-https://replit.com/@appbrewery/password-generator-end
+## [Course solution](https://replit.com/@appbrewery/password-generator-end)

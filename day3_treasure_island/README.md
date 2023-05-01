@@ -8,6 +8,4 @@ The story is based on this [diagram](https://app.diagrams.net/?lightbox=1&highli
 
 Clone the repository and run the treasure_island.py with a Python interpreter.
 
-## Course solution
-
-https://replit.com/@appbrewery/treasure-island-end
+## [Course solution](https://replit.com/@appbrewery/treasure-island-end)

@@ -27,6 +27,4 @@ flowchart TB
 
 Clone the repository and run the hangman.py with a Python interpreter.
 
-## Course solution
-
-https://replit.com/@appbrewery/Day-7-Hangman-Final
+## [Course solution](https://replit.com/@appbrewery/Day-7-Hangman-Final)

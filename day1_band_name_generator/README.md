@@ -6,6 +6,4 @@ This simple Python app generates a band name. It takes user input and uses that 
 
 Clone the repository and run the band_name_generator.py with a Python interpreter.
 
-## Course solution
-
-https://replit.com/@appbrewery/band-name-generator-end
+## [Course solution](https://replit.com/@appbrewery/band-name-generator-end)

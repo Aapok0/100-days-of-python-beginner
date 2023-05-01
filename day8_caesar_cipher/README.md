@@ -6,6 +6,4 @@ This is an ancient cipher used by the romans during Julius Caesar's time to enco
 
 Clone the repository and run the caesar_cipher.py with a Python interpreter.
 
-## Course solution
-
-https://replit.com/@appbrewery/caesar-cipher-4-end
+## [Course solution](https://replit.com/@appbrewery/caesar-cipher-4-end)
